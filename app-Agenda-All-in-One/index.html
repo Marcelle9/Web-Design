@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <style>
+.button {
+  background-color: #649ef5; 
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width:400px;
+  height: 100px;
+  border-radius: 25px;
+}
+
+.button1 {
+  color: black; 
+  font-weight: bold;
+  font-size: 30px;
+  border: 2px solid black;
+  background-color #649ef5;
+  border-coner
+}
+
+.button1:hover {
+  background-color: white;
+  color: black;
+}
+
+</style>
+
+
+
+        <script>
+            function myClock() {         
+  setTimeout(function() {   
+  
+    const dataAtual = new Date();
+    const hora = dataAtual.toLocaleTimeString();
+	var ano = dataAtual.getFullYear();
+	var dia = dataAtual.getDate();
+	var month = dataAtual.getMonth();
+    var monthArr = ["Janeiro", "Fevereiro","Março", "Abril", "Maio", "Junho", "Julho", "Augosto", "Setembro", "Outubro", "Novembro","Dezembro"];
+    month = monthArr[month];
+	
+	document.getElementById("data").innerHTML = "Dia  "+ dia + " de " + month + " de " + ano;
+    document.getElementById("demo").innerHTML = hora; 
+    myClock();             
+  }, 1000)
+}
+myClock();  
+        function notImplement(){
+		  alert("Essa funcionalidade ainda não foi implementada")
+		}
+        </script>
+</head>
+
+ <body onload="myClock()" style="background-color:#e1e5e6;">
+     
+     <div class="row">
+		  <div id="data"style="font-size:30px; text-align:center; "></div>
+		  <div id="demo"style="font-size:40px; text-align:center;"></div><br/>
+	 </div>
+	 <div style="text-align:center">
+		<div class="row">	<button class="button button1 " onclick="notImplement()"">Remédios para tomar</button> </div>
+		<div class="row">	<button class="button button1 " onclick="javascript:location.href='Aniversario.html'">Aniversários</button> </div>
+		<div class="row">	<button class="button button1 " onclick="javascript:location.href='ConsultaMedica.html'">Consultas Médicas</button> </div>
+		<div class="row">	<button class="button button1 "onclick="javascript:location.href='Endereco.html'">Endereços</button> </div>
+		<div class="row">	<button class="button button1  " onclick="javascript:location.href='teste.html'">Telefones</button> </div>
+	 </div>
+    </body>
+</html>
