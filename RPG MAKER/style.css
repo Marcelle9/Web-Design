@@ -1,0 +1,91 @@
+
+#menu ul {
+	padding:0px;
+	margin:0px;
+	background-color:#EDEDED;
+	list-style:none;
+}
+#menu ul li { display: inline; }
+#menu ul li a {
+	padding: 2px 10px;
+	display: inline-block;
+ }
+#menu ul li a:hover {
+	background-color:#D6D6D6;
+	color: #6D6D6D;
+	border-bottom:3px solid #EA0000;
+}
+a{
+	color: red;
+    text-decoration-line: none;
+}
+
+body{
+	background-image: url(Cross-Over.full.1687093.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position:center;
+}
+
+#header {
+	font-family: comic sans ms;
+	margin-top: 2cm;
+	margin-right:300px;
+	margin-left:300px;
+	background-color: #900;
+    color: #FFF;
+	box-shadow: 0 0 31px 31px #900;
+}
+#jogos{
+	border-radius: 10px;
+	background-color: lightblue;
+    color: #FFF;
+    padding: 5px;
+	font-style:bold;
+}
+footer{
+	border-radius: 10px;
+	background-color: beige;
+    color: black;
+    padding: 5px;
+	text-align: center;
+	font-style:bold;
+	font-size:12px;
+}
+#container {
+  position: relative;
+  width: 100px;
+}
+
+#image {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+#overlay {
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height:100px;
+  width:100px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+#container:hover #overlay {
+  opacity: 1;
+}
+
+#text {
+  color: white;
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}

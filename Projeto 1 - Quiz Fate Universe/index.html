@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+body{background-image: url(cinza.jpg) ;background-size: cover;background-position: 50% 50%;}    
+</style>
+<script language="JavaScript"> 
+/* início do código  */
+<!-- 
+var pontos=0; 
+function reponse(form) { 
+for (var i=0;i<form.length;i++){ 
+ if (form[i].checked){ 
+  break 
+ } 
+} 
+var answer="" 
+if (i<form.length){ 
+ answer = form[i].value 
+} 
+return answer; 
+} 
+
+function solution(form) { 
+/* variável para cada pergunta */
+var points=0;var rep="";var comment="";var resposta1="";var resposta2="";var resposta3="";var onome=""
+
+/* valor de pontos para as questões */
+if (reponse(form.question1)=="A") {pontos+=1} 
+if (reponse(form.question2)=="B") {pontos+=1} 
+if (reponse(form.question3)=="B") {pontos+=1} 
+
+/* cada mensagem vai de acordo com o input marcado para resposta */
+
+/* mensagem para questão 1 */
+if (reponse(form.question1)=="") {resposta1="<font color=#cccccc>não respondida</font>"} 
+if (reponse(form.question1)=="A") {resposta1="<font color=#cccccc>incorreta, a correta é Jeanne d'Arc</font>"} 
+if (reponse(form.question1)=="B") {resposta1="<font color=#cccccc>incorreta, a correta é Jeanne d'Arc</font>"}
+if (reponse(form.question1)=="C") {resposta1="<font color=#0099cc>correta</font>";
+                                  pontos=pontos+1;}
+if (reponse(form.question1)=="D") {resposta1="<font color=#cccccc>incorreta, a correta é Jeanne d'Arc</font>"}
+    
+/* mensagem para questão 2 */
+if (reponse(form.question2)=="") {resposta2="<font color=#cccccc>não respondida</font>"} 
+if (reponse(form.question2)=="A") {resposta2="<font color=#0099cc>correta</font>";
+                                  pontos=pontos+1;} 
+if (reponse(form.question2)=="B") {resposta2="<font color=#cccccc>incorreta, a correta é Arthur</font>"}
+if (reponse(form.question2)=="C") {resposta2="<font color=#cccccc>incorreta, a correta é Arthur</font>"}
+if (reponse(form.question2)=="D") {resposta2="<font color=#cccccc>incorreta, a correta é Arthur</font>"}
+    
+/* mensagem para questão 3 */
+if (reponse(form.question3)=="") {resposta3="<font color=#cccccc>não respondida</font>"} 
+if (reponse(form.question3)=="A") {resposta3="<font color=#cccccc>incorreta, a correta é Nikola Tesla</font>"} 
+if (reponse(form.question3)=="B") {resposta3="<font color=#0099cc>correta</font>";
+                                  pontos=pontos+1;}
+if (reponse(form.question3)=="C") {resposta3="<font color=#cccccc>incorreta, a correta é Nikola Tesla</font>"}
+if (reponse(form.question3)=="D") {resposta3="<font color=#cccccc>incorreta, a correta é Nikola Testa</font>"}
+
+/* mensagem para questão 4 */
+if (reponse(form.question4)=="") {resposta4="<font color=#cccccc>não respondida</font>"} 
+if (reponse(form.question4)=="A") {resposta4="<font color=#cccccc>incorreta, a correta é Nero</font>"} 
+if (reponse(form.question4)=="B") {resposta4="<font color=#cccccc>incorreta, a correta é Nero</font>"}
+if (reponse(form.question4)=="C") {resposta4="<font color=#0099cc>correta</font>";
+                                  pontos=pontos+1;}
+if (reponse(form.question4)=="D") {resposta4="<font color=#cccccc>incorreta, a correta é Nero</font>"}
+    /* mensagem para questão 5 */
+if (reponse(form.question5)=="") {resposta5="<font color=#cccccc>não respondida</font>"} 
+if (reponse(form.question5)=="A") {resposta5="<font color=#0099cc>correta</font>";
+                                  pontos=pontos+1;} 
+if (reponse(form.question5)=="B") {resposta5="<font color=#cccccc>incorreta, a correta é Robin Hood</font>"}
+if (reponse(form.question5)=="C") {resposta5="<font color=#cccccc>incorreta, a correta é Robin Hood</font>"}
+if (reponse(form.question5)=="D") {resposta5="<font color=#cccccc>incorreta, a correta é Robin Hood</font>"}
+    
+/* mensagem para questão 6 */
+if (reponse(form.question6)=="") {resposta6="<font color=#cccccc>não respondida</font>"} 
+if (reponse(form.question6)=="A") {resposta6="<font color=#cccccc>incorreta, a correta é Alexander, O Grande</font>"} 
+if (reponse(form.question6)=="B") {resposta6="<font color=#cccccc>incorreta, a correta é Alexander, O Grande</font>"}
+if (reponse(form.question6)=="C") {resposta6="<font color=#0099cc>correta</font>";
+                                   pontos=pontos+1;}
+if (reponse(form.question6)=="D") {resposta6="<font color=#cccccc>incorreta, a correta é Alexander, O Grande</font>"}
+    
+/* mensagem para questão 7 */
+if (reponse(form.question7)=="") {resposta7="<font color=#cccccc>não respondida</font>"} 
+if (reponse(form.question7)=="A") {resposta7="<font color=#cccccc>incorreta, a correta é Thomas Edison</font>"} 
+if (reponse(form.question7)=="B") {resposta7="<font color=#cccccc>incorreta, a correta é Thomas Edison</font>"}
+if (reponse(form.question7)=="C") {resposta7="<font color=#cccccc>incorreta, a correta é Thomas Edison</font>"}
+if (reponse(form.question7)=="D") {resposta7="<font color=#0099cc>correta</font>";
+                                  pontos=pontos+1;}
+    
+/* mensagem para questão 8 */
+if (reponse(form.question8)=="") {resposta8="<font color=#cccccc>não respondida</font>"} 
+if (reponse(form.question8)=="A") {resposta8="<font color=#cccccc>incorreta, a correta é Ricardo, Coração de Leão</font>"} 
+if (reponse(form.question8)=="B") {resposta8="<font color=#0099cc>correta</font>";
+                                  pontos=pontos+1;}
+if (reponse(form.question8)=="C") {resposta8="<font color=#cccccc>incorreta, a correta é Ricardo, Coração de Leão</font>"}
+if (reponse(form.question8)=="D") {resposta8="<font color=#cccccc>incorreta, a correta é Ricardo, Coração de Leão</font>"}
+    
+/* mensagem para questão 9 */
+if (reponse(form.question9)=="") {resposta9="<font color=#cccccc>não respondida</font>"} 
+if (reponse(form.question9)=="A") {resposta9="<font color=#0099cc>correta</font>";
+                                  pontos=pontos+1;} 
+if (reponse(form.question9)=="B") {resposta9="<font color=#cccccc>incorreta, a correta é Aquiles</font>"}
+if (reponse(form.question9)=="C") {resposta9="<font color=#cccccc>incorreta, a correta é Aquiles</font>"}
+if (reponse(form.question9)=="D") {resposta9="<font color=#cccccc>incorreta, a correta é Aquiles</font>"}    
+    
+/* mensagem para questão 10 */
+if (reponse(form.question10)=="") {resposta10="<font color=#cccccc>não respondida</font>"} 
+if (reponse(form.question10)=="A") {resposta10="<font color=#cccccc>incorreta, a correta é Gilgamesh</font>"} 
+if (reponse(form.question10)=="B") {resposta10="<font color=#cccccc>incorreta, a correta é Gilgamesh</font>"}
+if (reponse(form.question10)=="C") {resposta10="<font color=#0099cc>correta</font>";
+                                   pontos=pontos+1;}
+if (reponse(form.question10)=="D") {resposta10="<font color=#cccccc>incorreta, a correta é Gilgamesh</font>"}    
+
+/* aqui inicio o código mostrado na nova janela */
+chaine='' 
++'<head><title>Resultado</title>'
++'<style type=text/css>body{background-image: url(cinza.jpg) ;background-size: cover;background-position: 50% 50%;}a{font-family:arial;font-size:8pt;color:#696969;text-decoration:none;}#texto{font-family:verdana,arial;font-size:8pt;color:#696969;}#textos{font-family:verdana,arial;font-size:10px;color:#c7c7c7;}input{border:1px solid #f8f8f8;background-color:fefefe;font-family:arial;font-size:8pt;color:#1c1c1c;}#resultado{font-family:arial;font-size:8pt;color:#696969;}</style>'
++'</head>'
++'<center><br><br><font color=#696969>'+comment+'<BR>' 
+
++'<br><center><font id=texto>'+ formmail.onome.value +' veja abaixo o resumo das questões:</font></center><br>'
+
++'<table border=0 cellpading=3 cellspacing=3 style="border:1px solid #f8f8f8;background-color:#ffffff;" width="150">'
++"<tr><td><font id=textos>Pontos: </td><td><font id=resultado>"+ pontos +"</font></td></tr>"
++"<tr><td><font id=textos>1)</td><td><font id=resultado>"+ resposta1 +"</font></td></tr>"
++"<tr><td><font id=textos>2)</td><td><font id=resultado>"+ resposta2 +"</font></td></tr>"
++"<tr><td><font id=textos>3)</td><td><font id=resultado>"+ resposta3 +"</font></td></tr>"
++"<tr><td><font id=textos>4)</td><td><font id=resultado>"+ resposta4 +"</font></td></tr>"
++"<tr><td><font id=textos>5)</td><td><font id=resultado>"+ resposta5 +"</font></td></tr>"
++"<tr><td><font id=textos>6)</td><td><font id=resultado>"+ resposta6 +"</font></td></tr>"
++"<tr><td><font id=textos>7)</td><td><font id=resultado>"+ resposta7 +"</font></td></tr>"
++"<tr><td><font id=textos>8)</td><td><font id=resultado>"+ resposta8 +"</font></td></tr>"
++"<tr><td><font id=textos>9)</td><td><font id=resultado>"+ resposta9 +"</font></td></tr>"
++"<tr><td><font id=textos>10)</td><td><font id=resultado>"+ resposta10 +"</font></td></tr>"
++"</table></form>"
++'<a href="javascript:void(0)" onclick="javascript:window.close()">FECHAR</a>'
++'</CENTER></BODY></HTML>' 
+if (pontos==0){alert("Você fez: " +pontos+ " que vergonha!!!")}
+if (pontos<=3 && pontos!=0){alert("Você fez: " +pontos+ " você foi horrivel!")}
+if (pontos<=7 && pontos>=3){alert("Você fez:  " +pontos+ " você foi mais ou menos!")}
+if (pontos>7 && pontos!=10){alert("Você fez: " +pontos+ " foi incrivel!")}
+if (pontos==10){alert("Você fez: " +pontos+ " Parabéns você gabaritou!")}
+solu=open(); 
+solu.document.write(chaine) 
+} 
+//--> 
+</script>
+<meta charset="UTF-8">
+<title>Questionário</title> 
+<script>
+function vai() {
+location.reload()
+}
+</script>
+</head>
+<body></body>
+<!--ABAIXO SEGUE O FORMULÁRIO-->
+<form name=formmail>
+<center><font id=center>Você conhece os herois do Universo Fate?</font></center>
+<br>
+<center><a href=# onClick="vai()"><font id=normal>[ Clique aqui para fazer Novamente ]</font></a></center>
+<center><font id=normal>[Marcelle Cristina Vilas Boas Simões  TIA:31720374 ]</font></center>
+<div align=center> 
+<table border=0 cellpading=3 cellspacing=3 style="border:1px solid #f8f8f8;background-color:#ffffff;" width=400>
+<tr><td>
+<figure><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple62/v4/6f/be/39/6fbe398d-ecb5-bfb3-bcec-732565e9fcbc/source/512x512bb.jpg" alt="FATE QUIZ"></figure>
+<font id=pergunta> 
+Coloque ao lado o seu Nome:&nbsp;</font><input type="text" name="onome" value="" size=44 id=input><font color=#0099cc face=verdana size=1><b>&nbsp;*</b><br>
+<font id=pergunta> 
+<figure><img src="Jeanne d'Arc.PNG" alt="Jeanne d'arc" width="400px" height="400px"></figure>
+1 -É a santa padroeira da França e foi uma chefe militar da Guerra dos Cem Anos, durante a qual tomou partido pelos armagnacs, na longa luta contra os borguinhões e seus aliados ingleses.</font>
+<br><font id=resposta> 
+<font id=pergunta>(A)</font><input TYPE="radio" NAME="question1" VALUE="A"><font id=resposta>Leonor de Aquitânia<br>
+<font id=pergunta>(B)</font><input TYPE="radio" NAME="question1" VALUE="B"><font id=resposta>Gilles de Rais<br>
+<font id=pergunta>(C)</font><input TYPE="radio" NAME="question1" VALUE="C"><font id=resposta>Jeanne d'Arc<br>
+<font id=pergunta>(D)</font><input TYPE="radio" NAME="question1" VALUE="D"><font id=resposta>Baudelaire Duloire<br>    
+<br>
+<font id=pergunta> 
+<figure><img src="Arthur Pendragon.JPG" alt="Rei Arthur" width="400px" height="400px"></figure>
+2 - Um lendário britânico que, de acordo com as histórias medievais e romances de cavalaria, liderou a defesa da Grã-Bretanha contra os invasores saxões no final do século V e no início do século VI. </font>
+<br> 
+<font id=pergunta>(A)</font><input TYPE="radio" NAME="question2" VALUE="A"><font id=resposta>Arthur<br>
+<font id=pergunta>(B)</font><input TYPE="radio" NAME="question2" VALUE="B"><font id=resposta>Lancelot<br>
+<font id=pergunta>(C)</font><input TYPE="radio" NAME="question2" VALUE="C"><font id=resposta>Gawain<br>
+<font id=pergunta>(D)</font><input TYPE="radio" NAME="question2" VALUE="D"><font id=resposta>Bedivere<br>    
+<br>
+<font id=pergunta> 
+<figure><img src="Nikola Tesla.PNG" alt="Tesla" width="400px" height="400px"></figure>
+3 - Muitas vezes descrito como um importante cientista e inventor da modernidade, um homem que "espalhou luz sobre a face da Terra". É mais conhecido pelas suas muitas contribuições revolucionárias no campo do electromagnetismo no fim do século XIX e início do século XX.</font>
+<br> 
+<font id=pergunta>(A)</font><input TYPE="radio" NAME="question3" VALUE="A"><font id=resposta>Thomas Edison<br>
+<font id=pergunta>(B)</font><input TYPE="radio" NAME="question3" VALUE="B"><font id=resposta>Nikola Tesla<br>
+<font id=pergunta>(C)</font><input TYPE="radio" NAME="question3" VALUE="C"><font id=resposta>Milutin Tesla<br>
+<font id=pergunta>(D)</font><input TYPE="radio" NAME="question3" VALUE="D"><font id=resposta>George Westinghouse<br>    
+<br>
+<font id=pergunta>
+<figure><img src="Nero.PNG" alt="Nero" width="400px" height="400px"></figure>
+4 - O Imperador que oprimiu o Senado romano e todas as facções religiosas. Na Era Romana, sua posição em relação ao Senado e a opressão imposta aos cristãos fizeram com que ele fosse chamado de tirano.</font>
+<br> 
+<font id=pergunta>(A)</font><input TYPE="radio" NAME="question4" VALUE="A"><font id=resposta>Julius Ceasar<br>
+<font id=pergunta>(B)</font><input TYPE="radio" NAME="question4" VALUE="B"><font id=resposta>Galigula<br>
+<font id=pergunta>(C)</font><input TYPE="radio" NAME="question4" VALUE="C"><font id=resposta>Nero<br>
+<font id=pergunta>(D)</font><input TYPE="radio" NAME="question4" VALUE="D"><font id=resposta>Romulus<br>    
+<br>
+<font id=pergunta>
+<figure><img src="Robin Hood.JPG" alt="Robin Hood" width="400px" height="400px"></figure>
+5 - Era hábil no arco e flecha e vivia na floresta de Sherwood, onde era ajudado por um bando de fora-da-lei</font>
+<br> 
+<font id=pergunta>(A)</font><input TYPE="radio" NAME="question5" VALUE="A"><font id=resposta>Robin Hood<br>
+<font id=pergunta>(B)</font><input TYPE="radio" NAME="question5" VALUE="B"><font id=resposta>João Pequeno<br>
+<font id=pergunta>(C)</font><input TYPE="radio" NAME="question5" VALUE="C"><font id=resposta>Frei Tuck<br>
+<font id=pergunta>(D)</font><input TYPE="radio" NAME="question5" VALUE="D"><font id=resposta>Will Scarlet<br>    
+<br>
+<font id=pergunta> 
+<figure><img src="Iskandar.PNG" alt="Iskandar" width="400px" height="400px"></figure>
+6 - Criou um dos maiores impérios do mundo antigo. Morreu invicto em batalhas e é considerado um dos comandantes militares mais bem sucedidos da história.</font>
+<br> 
+<font id=pergunta>(A)</font><input TYPE="radio" NAME="question6" VALUE="A"><font id=resposta>Darius III<br>
+<font id=pergunta>(B)</font><input TYPE="radio" NAME="question6" VALUE="B"><font id=resposta>Filipe III<br>
+<font id=pergunta>(C)</font><input TYPE="radio" NAME="question6" VALUE="C"><font id=resposta>Alexander, O Grande<br>
+<font id=pergunta>(D)</font><input TYPE="radio" NAME="question6" VALUE="D"><font id=resposta>Alexander IV<br>    
+<br>
+<font id=pergunta> 
+<figure><img src="Thomas Edison.JPG" alt="Edison" width="400px" height="400px"></figure>
+7 -Foi um empresário dos Estados Unidos que patenteou e financiou o desenvolvimento de muitos dispositivos importantes de grande interesse industrial.</font>
+<br> 
+<font id=pergunta>(A)</font><input TYPE="radio" NAME="question7" VALUE="A"><font id=resposta>Milutin Tesla<br>
+<font id=pergunta>(B)</font><input TYPE="radio" NAME="question7" VALUE="B"><font id=resposta>George Westinghouse<br>
+<font id=pergunta>(C)</font><input TYPE="radio" NAME="question7" VALUE="C"><font id=resposta>Nikola Tesla<br>
+<font id=pergunta>(D)</font><input TYPE="radio" NAME="question7" VALUE="D"><font id=resposta>Thomas Edison<br>    
+<br>
+<font id=pergunta> 
+<figure><img src="Richard Lionheart.JPG" alt="Richard" width="400px" height="400px"></figure>
+8 - Também conhecido por sua grande reputação como guerreiro e líder militar, foi o Rei da Inglaterra de 6 de julho de 1189 até sua morte.</font>
+<br> 
+<font id=pergunta>(A)</font><input TYPE="radio" NAME="question8" VALUE="A"><font id=resposta>João Sem Terra<br>
+<font id=pergunta>(B)</font><input TYPE="radio" NAME="question8" VALUE="B"><font id=resposta>Ricardo, Coração de Leão<br>
+<font id=pergunta>(C)</font><input TYPE="radio" NAME="question8" VALUE="C"><font id=resposta>Henrique II<br>
+<font id=pergunta>(D)</font><input TYPE="radio" NAME="question8" VALUE="D"><font id=resposta>Filipe II<br>    
+<br>
+<font id=pergunta> 
+<figure><img src="Arquiles.PNG" alt="Arquiles" width="400px" height="400px"></figure>
+9 - Considerado um dos maiores guerreiros mitológicos da Grécia Antiga, participou de várias batalhas, entretanto, a mais importante foi a Guerra de Troia.</font>
+<br> 
+<font id=pergunta>(A)</font><input TYPE="radio" NAME="question9" VALUE="A"><font id=resposta>Aquiles<br>
+<font id=pergunta>(B)</font><input TYPE="radio" NAME="question9" VALUE="B"><font id=resposta>Agamenon<br>
+<font id=pergunta>(C)</font><input TYPE="radio" NAME="question9" VALUE="C"><font id=resposta>Heitor<br>
+<font id=pergunta>(D)</font><input TYPE="radio" NAME="question9" VALUE="D"><font id=resposta>Pátroclo<br>    
+<br>
+<font id=pergunta> 
+<figure><img src="Gilgamesh.JPG" alt="Gilgamesh" width="400px" height="400px"></figure>
+10 - Foi o rei da primeira dinastia de Uruk, datada de aproximadamente entre 2800-2500 AC. Foi considerado o mais ilustre antecessor dos reis sumérios, tornando-se objeto de lendas e poemas e sendo venerado como deidade. </font>
+<br> 
+<font id=pergunta>(A)</font><input TYPE="radio" NAME="question10" VALUE="A"><font id=resposta>Utnapishtim<br>
+<font id=pergunta>(B)</font><input TYPE="radio" NAME="question10" VALUE="B"><font id=resposta>Enkidu<br>
+<font id=pergunta>(C)</font><input TYPE="radio" NAME="question10" VALUE="C"><font id=resposta>Gilgamesh<br>
+<font id=pergunta>(D)</font><input TYPE="radio" NAME="question10" VALUE="D"><font id=resposta>Ur-Nungal<br>    
+<br>
+<font id=pergunta> 
+<center>
+<input TYPE="button" NAME="valide" VALUE="Resultado" onclick="javascript:solution(this.form);" style="border:1px solid #f8f8f8;background-color:#ffffff;color:#696969;"> 
+</center></td></form></tr>
+</table> 
+</body>
+</html>

@@ -1,0 +1,526 @@
+body{
+	background:url(background.jpg); 
+	color: #868686; 
+	font-family: Helvetica, sans-serif, arial; 
+	font-size: 1.125em; /* 18px ÷ 16px = 1.125em, corresponde a todo o layout e que está relacionado diretamente com a janela do navegador */
+	font-weight: 300; 
+	line-height: 22px;
+	text-align: left; 
+	text-shadow:1px 1px 0px #fff; 
+}
+.center{
+	margin: 0 auto;
+	max-width:1200px; 
+	width: 90%; 
+}
+
+.clearfix:before, .clearfix:after {
+    content: " "; 
+    display: table; 
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+img {
+    max-width: 100%; 
+}
+img, picture, video, embed {
+    max-width: 100%; 
+}
+h1, h2{
+	color:#FE9380;
+	font-size: 60px;
+	font-weight: 800;
+	letter-spacing: -3px; 
+	line-height: 60px;
+}
+h3{
+	font-size: 32px;
+	font-weight: 300;
+	letter-spacing: -2px; 
+	line-height: 38px;
+}
+p{
+	font-weight: 300;
+	letter-spacing: -1px; 
+}
+a, a:link, a:visited{
+	color:#FE9380; 
+	font-weight:400; 
+	text-decoration:none; 
+}
+a:hover{
+	color:#FE5E41;
+	text-decoration:underline; 
+	text-shadow:none; 
+}
+
+header{
+	border-bottom: 1px solid #E0E0E0; 
+	height:150px;
+	width:100%; /*1200px (largura do header) ÷ 1200px (largura do body) = 1 x 100 = 100%, assim o header terá o tamanho geral da página*/ 
+}
+/*
+=========================
+logotipo
+=========================
+*/
+	header h1 a{
+		background:url(imagens/logo-criar-site-responsivo.png) no-repeat; 
+		display:block; 
+		float:left; 
+		height:139px; 
+		text-indent:-9999; 
+		width:58.333333333333%; /* 700px (largura do logo) ÷ 1200px (largura do header) = 0.58333333333333 x 100 = 58.333333333333%*/
+	}
+
+nav{
+	float:right;
+	margin-top:78px; 
+	text-align:right; 
+	width:41.6666666666667%; /* 500px (largura do nav) ÷ 1200px (largura do body) = 0.416666666666667 x 100 = 41.6666666666667%*/
+}
+	nav ul{
+		list-style-type:none; 
+	}
+		nav li {
+			display: inline; 
+		}
+			nav ul li a{
+				margin-right: 2.5%; /* 30px (largura do link) ÷ 1200px (largura do body) = 0.025 x 100 = 2.5%*/
+			}
+				nav ul li:nth-child(5) a{
+					margin-right:0; 
+				}
+			nav a:link, nav a:visited{
+				color:#999;
+				font-size: 1.2222222222em; /* 22px (largura do link marcado(já visitado)) ÷ 18px (largura da fonte) = 1.2222222222em */
+				font-weight: 300;
+				letter-spacing: -0.0909090909em; /* -2px (espaço entre as letras(reduz pois é negativo)) ÷ 22px (largura da fonte) = -0.0909090909em */
+				line-height: 1.18181818182em; /* 26px (largura da linha) ÷ 22px (largura da fonte) = 1.18181818182em */
+				display:inline-block;
+			}
+			nav a.ativo:link, nav a:hover{
+				color:#FE9380; 
+			}
+
+.chamada{
+	height:290px;
+	text-align:center;
+	width:100%; /*1200px (largura do elemento chamada) ÷ 1200px (largura do body) = 1 x 100 = 100%*/
+}
+	h2 span{
+		font-size: 1em; /* 60px (tamanho da fonte) ÷ 60px = 1em (ele quer colocar 60px(tamanho da fonte) e precisa passar para design responsivo(em) e então divide por 60 satisfazendo a fórmula de conversão) */
+		font-weight: 300;
+		letter-spacing: -0.0333333333em; /* -2px ÷ 60px = 0.0333333333em (ele quer colocar -2px(espaçamento) e precisa passar para design responsivo(em) e então divide por 60 satisfazendo a fórmula de conversão) */
+		line-height: 1em; /* 60px (altura da linha) ÷ 60px = 1em (ele quer colocar 60px(altura da linha) e precisa passar para design responsivo(em) e então divide por 60 satisfazendo a fórmula de conversão) */
+	}
+	.chamada h3 {
+		margin: 0 auto;
+		width:75%; /* 900px (largura do h3) ÷ 1200px (largura do body) = 0.75 x 100 = 75%*/
+	}
+
+.container{
+	background-color:#FE9481;
+	height: 417px;
+	padding:2.5%; /* 30px (largura do padding) ÷ 1200px (largura do body) = 0.025 x 100 = 2.5%*/
+	width:95%; /* 1200px (largura do container) ÷ 1200px (largura do body) = 1 x 100 = 100% .:. 100% - 5.0% de padding (direita e esquerda) = 95%
+  Por causa do padding, a largura, width, do .container passou de 1.200px para 1.140px (95%)*/
+}
+.desktop, .tablet, .mobile{
+	float:left;
+	position:relative;
+	text-align:center;
+	width:31.57894736842105%; /* 360px (largura) ÷ 1140px (largura do container) = 0.3157894736842105 x 100 = 31.57894736842105%*/
+}
+.desktop, .tablet{
+	margin-right: 2.631578947368421%; /* 30px (largura) ÷ 1140px (largura do container) =  0.02631578947368421 x 100 = 2.631578947368421%*/
+}
+.mobile{
+	background-color:#9C8CB9;
+	margin-right:0px;
+}
+.desktop{
+	background-color:#FE9481;
+}
+.tablet{
+	background-color:#FCDA92;
+}
+
+.container .desktop figure, .container .tablet figure, .container .mobile figure {
+	margin: 15px auto 0px auto; 
+	width:69.44444444444444%; /* 250px (largura da imagem) ÷ 360px (largura do container) = 0.6944444444444 x 100 = 69.44444444444444%*/
+}
+
+.container h3{
+	color:#fff;
+	font-size: 1.77777777778em; /* 32px(largura do h3 do container) ÷ 18px(largura da fonte desejada) = 1.77777777778em, conversão do valor para em */
+	font-weight: 300;
+	letter-spacing: -0.0625em; /* -2px(espaço entre as letras) ÷ 32px(largura do h3 do container) = 0.0625em, conversão do valor para em */
+	margin-bottom: 30px;
+	text-shadow:none;
+}
+.container p{
+	background-color:#fff;
+	float:left;
+	height:160px;
+	padding: 1.9444444444444445%; /* 7px(largura do padding) ÷ 360px(largura do container) =  0.019444444444444445 x 100 =  1.9444444444444445%, conversão de 7px para "%"*/
+	position:absolute;
+	max-width:100%; /* 360px ÷ 360px = 1 x 100 = 100%, (vai cobrir todo container)*/
+	text-align:justify;
+	top:225px;
+}
+
+span.btn{
+	font-size: 1.1111111111em; /* 20px(tamanho do botão) ÷ 18px(tamanho da fonte desejada) = 1.1111111111em, (ele quer colocar 20px(tamanho da fonte) e precisa passar para design responsivo(em) e então divide por 18 satisfazendo a fórmula de conversão) */
+	font-weight: 400;
+	letter-spacing: -0.1em; /* -2px(largura espaçamento entre letras) ÷ 20px(tamanho do botão) = -0.1em */
+	height:27px;
+	margin-top: 30px;
+	position:absolute;
+	right: 1px;
+	text-align:center;
+	text-shadow:none;
+	width:33.33333333333333%; /* 120px(largura do span) ÷ 360px(largura do container) = 0.3333333333333333 x 100 = 33.33333333333333%*/
+}
+span.btn a{
+	color:#fff;
+	padding: 2px 3.333333333333333%; /* 4px(largura do padding) ÷ 120px(largura do span) = 0.3333333333333333 x 100 = 3.333333333333333%*/
+}
+.desktop span.btn a{
+	background-color:#FE9481;
+}
+.tablet span.btn a{
+	background-color:#FCDA92;
+}
+.mobile span.btn a{
+	background-color:#9C8CB9;
+}
+
+footer{
+	clear:both;
+	height: 50px;
+	padding: 10px 0;
+	width:100%; /* 1200px ÷ 1200px = 1 x 100 = 100% (vai cobrir todo footer)*/
+}
+.copyright{
+	float:left;
+	margin-left: 2.5%; /* 30px (largura da margem esquerda) ÷ 1200px (largura do footer) = 0.025 x 100 = 2.5%*/
+}
+.desenvolvedor{
+	float:right;
+}
+.desenvolvedor figure{
+	width:100%;
+}
+/* 
+1200px – Desktops, notebooks com monitores widescreen
+***********************************************************/
+/*Poucas modificações pois a página já está feita para Desktop(padrão)*/
+@media screen and (max-width:1200px){
+	.chamada h3 {
+		font-size: 1.66666666667em; /* 30px (largura do texto em chamada h3 para desktop, notebooks com monitores widescreen) ÷ 18px (largura da fonte) */
+	}
+	.container h3{
+		font-size: 1.55555555556em; /*  28px (largura do texto em container h3 para desktop, notebooks com monitores widescreen) ÷ 18px (largura da fonte) */
+	}
+	.container p{
+		height: 170px;
+		top:217px;
+	}
+}
+/* 
+960px – Tablets no formato paisagem e alguns monitores mais antigos
+***********************************************************/
+@media screen and (max-width:960px){
+	header h1 a{
+		width:37.5%; /* 360px (largura do header para tablets no formato paisagem...)  ÷ 960px (tamanho da tela de Tablets no formato paisagem e alguns monitores mais antigos) */
+	}
+	nav{
+		width:62.5%; /* 600px (largura do nav para tablets no formato paisagem) ÷ 960px (tamanho da tela de Tablets no formato paisagem e alguns monitores mais antigos)  */
+	}
+	h2{
+		font-size:2.6666666667em; /*48px (largura do h2) ÷ 18px (largura da fonte)*/
+	}
+/*.chamada*/
+	.chamada {
+		height: 250px;
+	}
+		.chamada h3{
+			font-size:1.5em; /*27px (largura do h3) ÷ 18px (largura da fonte)*/
+			width:88.54166666666667%; /*850px (largura do chamada) ÷ 960px (tamanho da tela de Tablets no formato paisagem e alguns monitores mais antigos)*/
+		}
+/*.container*/
+	.container{
+		height: 425px;
+		padding:3.125%; /* 30px (largura do padding) ÷ 960px (tamanho da tela de Tablets no formato paisagem e alguns monitores mais antigos) */
+		width:93.75%; /* 100% (960px) - 6.25% de padding (direita e esquerda) = 92.1875%*/
+	}
+		.desktop, .tablet, .mobile{
+			width:31.45833333333333%; /* 302px (largura dos blocos desktop,tablet,mobile) ÷ 960px (tamanho da tela de Tablets no formato paisagem e alguns monitores mais antigos) */
+		}
+		.container .desktop figure, .container .tablet figure, .container .mobile figure {
+			width:66.22516556291391%; /* 200px (largura da figura) ÷ 302px (largura dos blocos desktop,tablet,mobile) %*/
+		}
+			.container img{
+					height:100px;
+				}
+		.container h3{
+			font-size: 1.6666666667em; /*30px (largura do h3) ÷ 18px (largura da fonte)*/
+		}
+		.container p{
+			font-size: 0.8333333333em; /*15px (largura da fonte) ÷ 18px (largura do p)*/
+			top: 230px;
+		}
+}
+/* 
+768px – Tablets no formato retrato, como o iPad
+***********************************************************/
+@media screen and (max-width:768px){
+/*cores dos links e H2*/
+	h2, a, a:link, a:visited{
+	color:#FBCA61; 
+}
+	a:hover{
+		color:#F9AD0F;
+}
+/*header*/	
+	header {
+		height:195px;
+		text-align:center;
+	}
+		header h1 a{
+			background-position: 57% 0;
+			height: 126px;
+			margin-bottom: 15px;
+			width: 100%;
+		}
+		nav{
+			float:none;
+			text-align:center;
+			width: 100%;
+		}
+			nav a.ativo:link, nav a:hover{
+				color:#FBCA61; 
+			}
+/*.chamada*/
+	.chamada{
+		height:200px;
+	}
+		h2 {
+			font-size: 2.2222222222em; /*40px(largura do h2) ÷ 18px(largura da fonte)*/
+		}
+		.chamada h3{
+			font-size:1.1111111111em; /*20px(tamanho do h3) ÷ 18px(largura da fonte)*/
+		}
+/*.container*/
+	.container{
+		background-color:#FCDA92;
+		height: 380px;
+		padding:3.90625%; /* 30px (largura do padding) ÷ 768px (largura da tela para tablets no formato retrato, como o iPad)  = 0.025 x 100 = 2.5%*/
+		width:92.1875%; /* 100% (768px - largura da tela para tablets no formato retrato, como o iPad) - 7.8125% de padding (direita e esquerda) = 92.1875%*/
+	}
+		.desktop, .tablet, .mobile{
+			width:31.25%; /* 240px (largura dps blocos desktop, tablet, mobile)  ÷ 768px (largura da tela para tablets no formato retrato, como o iPad) */
+		}
+		.container .desktop figure, .container .tablet figure, .container .mobile figure {
+			width:62.25%; /* 150px (largura da figura) ÷ 240px(largura dps blocos desktop, tablet, mobile) %*/
+		}
+			.container img{
+					height:80px;
+				}
+		.container h3{
+			font-size: 1.6666666667em; /*30px (largura do h3) ÷ 18px (largura da fonte)*/
+		}
+		.container p{
+			font-size: 0.7777777778em; /*14px (tamanho da fonte) ÷ 18px (largura de p)*/
+			height:140px;
+			line-height: 1.1428571428em; /*16px (altura da linha) ÷ 14px (tamanho da fonte)*/
+			padding: 2.9166666667%; /* 7px (largura do padding) ÷ 240px (largura dps blocos desktop, tablet, mobile) */
+			top: 215px;
+		}
+			span.btn{
+				font-size: 1.1111111111em; /* 20px (largura do span) ÷ 18px (largura da fonte) = 1.1111111111em */
+				letter-spacing: -0.1em; /* -2px (largura espaçamento entre letras) ÷ 20px (largura do span) = -0.1em */
+				height:22px;
+				margin-top: 20px;
+				position:absolute;
+				width:50%;
+			}
+			span.btn a{
+				padding: 2px 3.333333333333333%; /* 4px (largura do padding) ÷ 120px(largura do hiperlink) */
+			}	
+}
+/* 
+480px – Smartphones no formato paisagem com tela pequena
+***********************************************************/
+@media screen and (max-width:480px){
+/*Geral*/
+*{
+	margin:0;
+	padding:0;
+}
+.center{
+	width:100%;
+}
+/*cores dos links e H2*/
+h2, a, a:link, a:visited{
+	color:#9C8CB9; 
+}
+a:hover{
+		color:#745F9A;
+}
+/*header*/	
+header {
+	border-bottom: none;
+	height:auto;
+	text-align:center;
+}
+	header h1 a{
+		background-position: 50% 0;
+		display:inherit;
+		height: 126px;
+		width: 100%;
+	}
+/*menu nav*/
+nav{
+	clear:both;
+}
+	nav li {
+		background-color: #9C8CB9;
+		display:block;
+	}
+		nav ul li a{
+			height: 40px;
+			margin: 0 auto;
+			padding-top:3px;
+			text-align:center;
+			text-shadow:none;
+			width: 100%;
+		}
+		nav li a:link{
+			color:#fff;
+			font-size:1.3888888889em; /*25px (largura da fonte do link) ÷ 18px (largura da fonte)*/
+		}
+		nav li a.ativo:link, nav li a:hover, nav li a:visited {
+			background-color:#745F9A; 
+			color:#fff;
+			text-decoration:none;
+		}
+		nav li a.ativo:hover, nav li a.ativo:visited{
+			 background-color: #9C8CB9;
+		}
+/*.chamada*/
+.chamada{
+	height:130px;
+	margin-top:25px;
+}
+	h2 {
+		font-size: 1.4444444444em; /*26px (largura do h2) ÷ 18px (largura da fonte)*/
+		letter-spacing:-0.0769230769230769em; /*2px (tamanho do espaçamento entre letras) ÷ 26px (largura do h2)*/
+		margin-bottom: 15px;
+	}
+	.chamada h3{
+		font-size:0.7777777778em; /*14px (largura da fonte) ÷ 18px (largura do h3)*/
+	}
+/*.container*/
+.container{	
+	background-color:#9C8CB9;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+	.container .desktop, .container .tablet, .container .mobile{
+		float:none;
+		height:160px;
+		width:100%;
+	}
+	.container .desktop figure, .container .tablet figure, .container .mobile figure{
+		float:left;
+		height:160px;
+		margin:0;
+		padding:0;
+		width: 53.125%; /*255px (largura da figure dos blocos desktop,tablet,mobile) ÷ 480px (largura da tela de smartphones no formato paisagem com tela pequena)*/
+	}
+	.container h3{
+		float:left;
+		margin-top: 40px;
+		width: 46.875%; /*225px (largura do h3) ÷ 480px (largura da tela de smartphones no formato paisagem com tela pequena)*/
+	}	
+		.container .desktop figure img, .container .tablet figure img, .container .mobile figure img{
+			height:125px;
+			margin-top:15px;
+			width:86.2745098040%; /*220px(largura da imagem) ÷ 255px(largura da figure dos blocos desktop,tablet,mobile)*/
+		}
+	.container p{
+		display:none; /*oculta o parágrafo*/
+	}
+/*footer*/
+	.copyright, .desenvolvedor{
+		float:none;
+		margin: 0;
+		padding: 0;
+		text-align:center;
+	}
+	.desenvolvedor figure{
+		width:inherit;
+	}	
+}
+/* 
+320px – Smartphones no formato retrato com tela pequena
+***********************************************************/
+@media screen and (max-width:320px){
+/*cores dos links e H2*/
+h2, a, a:link, a:visited{
+	color:#79E1D5; 
+}
+a:hover{
+		color:#2FD0BC;
+}
+/*menu nav*/
+	nav li {
+		background-color: #79E1D5;
+	}
+		nav li a:link{
+		color:#555;
+		}
+		nav li a.ativo:link, nav li a:hover, nav li a:visited {
+			background-color:#2FD0BC; 
+			color:#fff;
+		}
+		nav li a.ativo:hover, nav li a.ativo:visited{
+			 background-color: #2FD0BC;
+		}
+/*.chamada*/
+.chamada{
+	height:130px;
+	margin-top:20px;
+}
+	h2 {
+		font-size: 1.1111111111em; /*20px(largura da fonte) ÷ 18px(largura do h2)*/
+		margin-bottom: 15px;
+	}
+	.chamada h3{
+		font-size:0.7777777778em; /*14px(largura da fonte) ÷ 18px(largura do h3)*/
+	}
+/*.container*/
+	.container .desktop, .container .tablet, .container .mobile{
+		float:none;
+		height:160px;
+		width:100%;
+	}
+	.container .desktop figure, .container .tablet figure, .container .mobile figure{
+		float:left;
+		width: 100%;
+	}
+	.container h3{
+		display:none;
+	}	
+	.container p{
+		display:none; /*oculta o parágrafo*/
+	}	
+}
